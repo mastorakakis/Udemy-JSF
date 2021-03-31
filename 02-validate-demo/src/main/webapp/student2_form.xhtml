@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="en"
-    xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <h:head>
-        <title>Student TWO Registration Form</title>  
-        
-        <style>
-        		.error {color:red}
-        </style>            
-    </h:head>
+<h:head>
+    <title>Student TWO Registration Form</title>
 
-	<h:body>
-		
-		<h:form>
+    <style>
+        .error {
+            color: red
+        }
+    </style>
+</h:head>
 
-			First name: <h:inputText value="#{student2.firstName}"
-									 label="First name" />	
-									 
-            <br/><br/>
+<h:body>
 
-            Last name: <h:inputText value="#{student2.lastName}"
-            							label="Last name" />
-												 	
-            <br/><br/>
+    <h:form>
 
-			Free Passes: <h:inputText value="#{student2.freePasses}"
-            							  label="Free Passes"						 
-            							  id="free_passes">
-            				
-            					<f:validateLongRange minimum="0" maximum="10" />
-            							
-           				</h:inputText>
+        First name: <h:inputText value="#{student2.firstName}"
+                                 label="First name"/>
 
-			<h:message for="free_passes" styleClass="error" />
+        <br/><br/>
 
-            <br/><br/>
+        Last name: <h:inputText value="#{student2.lastName}"
+                                label="Last name"/>
 
-			Postal Code: <h:inputText value="#{student2.postalCode}"
-            							  label="Postal Code"						 
-            							  id="postal_code">
-            				
-            					<f:validateLength minimum="5" maximum="5" />
-            							
-           				</h:inputText>
+        <br/><br/>
 
-			<h:message for="postal_code" styleClass="error" />
+        Free Passes: <h:inputText value="#{student2.freePasses}"
+                                  label="Free Passes"
+                                  id="free_passes">
+                        <f:validateLongRange minimum="0" maximum="10"/>
+                    </h:inputText>
 
-            <br/><br/>
-			
-		    <h:commandButton value="Submit" action="student2_response" />
+        <h:message for="free_passes" styleClass="error"/>
 
-		</h:form>
+        <br/><br/>
 
-	</h:body>
-	
+        Postal Code: <h:inputText value="#{student2.postalCode}"
+                                  label="Postal Code"
+                                  id="postal_code">
+                        <f:validateLength minimum="5" maximum="5"/>
+                    </h:inputText>
+
+        <h:message for="postal_code" styleClass="error"/>
+
+        <br/><br/>
+
+        <h:commandButton value="Submit" action="student2_response"/>
+
+    </h:form>
+
+</h:body>
+
 </html>
 
 

@@ -16,6 +16,7 @@
 	<h:body>
 		
 		<h:form>
+			<h:messages styleClass="error"/>
 
 			First name: <h:inputText value="#{student1.firstName}"
 									 label="First name" />	
@@ -35,8 +36,7 @@
 			Email: <h:inputText value="#{student1.email}"
             						label="Email"
             						required="true" 
-            						id="email"
-            						requiredMessage="Your must give your email!" />
+            						id="email"/>
 
 			<h:message for="email" styleClass="error" />
 

@@ -42,21 +42,16 @@ public class Student4 {
 		this.courseCode = courseCode;
 	}
 
-	public void validateTheCourseCode(FacesContext context, 
-									  UIComponent component, 
-									  Object value) throws ValidatorException {
-		
+	public void validateTheCourseCode(FacesContext context,
+									  UIComponent component, Object value) throws ValidatorException {
 		if (value == null) {
 			return;
 		}
-		
 		String data = value.toString();
 		
 		// Course code must start with LUV ... if not, throw exception
 		if (!data.startsWith("LUV")) {
-			
 			FacesMessage message = new FacesMessage("Course code must start with LUV");
-			
 			throw new ValidatorException(message);
 		}
 	}
