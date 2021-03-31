@@ -1,19 +1,21 @@
-package com.luv2code.jsf.hello;
+package com.luv2code.jsf.validatedemo;
 
-import javax.annotation.ManagedBean;
+import javax.faces.bean.ManagedBean;
 
 @ManagedBean
-public class Student {
+public class Student1 {
 
 	private String firstName;
 	private String lastName;
-	
+	private String email;
+
 	// create no-arg constructor
-	public Student() {
+	public Student1() {
 		
 	}
 
-	// define getter/setter methods	
+	// define getter/setter methods
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -30,8 +32,19 @@ public class Student {
 		this.lastName = lastName;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
 	
 }
+
+
 
 
 
