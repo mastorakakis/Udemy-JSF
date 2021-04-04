@@ -16,6 +16,7 @@
 	<h:body>
 		
 		<h:form>
+			<!-- show all error messages -->
 			<h:messages styleClass="error"/>
 
 			First name: <h:inputText value="#{student1.firstName}"
@@ -28,7 +29,7 @@
             							required="true"
             							id="last_name"
             							requiredMessage="Your last name is mandatory." />
-
+			<!-- show single error message -->
 			<h:message for="last_name" styleClass="error" />
 												 	
             <br/><br/>
